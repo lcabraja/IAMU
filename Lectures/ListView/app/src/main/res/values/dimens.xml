@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ivSize">60dp</dimen>
+    <dimen name="pudding">5dp</dimen>
+</resources>

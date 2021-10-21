@@ -18,10 +18,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setAdapter() {
-        val adapter = ArrayAdapter(
+        val adapter = ShowsAdapter(
             this,
-            android.R.layout.simple_list_item_1,
-            resources.getStringArray(R.array.shows)
+            listOf(
+                Show("Monty Python", R.drawable.monty_python),
+                Show("Black Adder", R.drawable.black_adder),
+                Show("Friends", R.drawable.friends)
+            )
         )
 
         binding.lvShows.adapter = adapter
