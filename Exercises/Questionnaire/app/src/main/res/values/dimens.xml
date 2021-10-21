@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainPadding">10dp</dimen>
+    <dimen name="textSize">25sp</dimen>
+    <dimen name="marginTop">20dp</dimen>
+</resources>
