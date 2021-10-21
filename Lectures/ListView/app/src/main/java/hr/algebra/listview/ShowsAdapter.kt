@@ -13,15 +13,32 @@ class ShowsAdapter(context: Context, shows: List<Show>) : ArrayAdapter<Show>(con
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         // we're reusing the previous view object to prevent from unnecessary inflating
-        val view = convertView ?: LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
+
+        val viewHolder: ViewHolder
+        var view = convertView
+        if (view == null) {
+            view = LayoutInflater
+                .from(parent.context)
+                .inflate(R.layout.item, parent, false)
+
+            viewHolder = ViewHolder(
+                view.findViewById(R.id.ivShow),
+                view.findViewById(R.id.tvShow)
+            )
+
+            view.tag = viewHolder
+        } else {
+            viewHolder = view.tag as ViewHolder
+        }
+
         val show = getItem(position)
-        // but we're not reusing these, so the count of newly generated objects has onyl fallen from 3 to 2 in this example
-        val ivShow = view.findViewById<ImageView>(R.id.ivShow)
-        val tvShow = view.findViewById<TextView>(R.id.tvShow)
 
-        ivShow.setImageResource(show!!.picture)
-        tvShow.text = show!!.title
+        viewHolder.hivShow.setImageResource(show!!.picture)
+        viewHolder.htvShow.text = show!!.title
 
-        return view
+        return view!!
     }
+
+    private class ViewHolder(val hivShow: ImageView, val htvShow: TextView)
+
 }
