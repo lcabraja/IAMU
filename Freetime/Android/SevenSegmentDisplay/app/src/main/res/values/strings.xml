@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Seven Segment Display</string>
+    <string name="startingString">\?</string>
+</resources>
