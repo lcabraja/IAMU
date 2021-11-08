@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Intents</string>
+    <string name="shareMessage">Share message</string>
+    <string name="smsSent">SMS Sent</string>
+</resources>
