@@ -1,5 +1,6 @@
 package hr.algebra.intents
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,6 +16,7 @@ class CountVowelsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_count_vowels)
 
         handleIntent()
+        Toast.makeText(this, "Calculated, go back", Toast.LENGTH_SHORT).show()
     }
 
     private fun handleIntent() {
@@ -25,6 +27,12 @@ class CountVowelsActivity : AppCompatActivity() {
 
     private fun countVowels(value: String) {
         nrVowels = value.lowercase(Locale.getDefault()).replace("[^aeiou]".toRegex(), "").length
-        Toast.makeText(this, nrVowels.toString(), Toast.LENGTH_SHORT).show()
+    }
+
+    override fun finish() {
+        setResult(RESULT_OK, Intent().apply {
+            putExtra(OUTPUT_PARAM, nrVowels)
+        })
+        super.finish()
     }
 }
