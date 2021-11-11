@@ -8,14 +8,15 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/etInput"
-        android:hint="@string/insert_parameters"
+        android:id="@+id/etUrl"
+        android:inputType="textUri"
+        android:text="http://www.index.hr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
     <Button
-        android:id="@+id/btnCount"
-        android:text="@string/count_vowels"
+        android:id="@+id/btnOpen"
+        android:text="@string/open_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
