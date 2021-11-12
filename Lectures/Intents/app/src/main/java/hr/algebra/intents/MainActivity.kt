@@ -27,7 +27,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupListeners() {
         binding.btnOpen.setOnClickListener {
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(binding.etUrl.text.toString())))
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(binding.etUrl.text.toString()))
+            )
         }
     }
 }
