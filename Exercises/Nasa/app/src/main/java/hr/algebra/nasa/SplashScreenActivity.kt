@@ -25,10 +25,14 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun redirect() {
+        // ako su podaci importani, redirect:
         Handler(Looper.getMainLooper()).postDelayed(
             { startActivity<HostActivity>() },
             DELAY
         )
+        // u suprotnom,
+        // 1. ako si online, pokreni servis za skidanje podataka
+        // 2. u suprotnom ispisi poruku i izidji
     }
 
     private fun startAnimation() {
