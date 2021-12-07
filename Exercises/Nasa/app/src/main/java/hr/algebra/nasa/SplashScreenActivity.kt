@@ -2,11 +2,8 @@ package hr.algebra.nasa
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import hr.algebra.nasa.databinding.ActivitySplashScreenBinding
-import hr.algebra.nasa.framework.getBooleanPreference
-import hr.algebra.nasa.framework.startActivity
-import hr.algebra.nasa.framework.startAnimation
+import hr.algebra.nasa.framework.*
 
 private const val DELAY = 3000L
 const val DATA_IMPORTED = "hr.algebra.nasa.data_imported"
@@ -25,14 +22,17 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun redirect() {
         // ako su podaci importani, redirect:
         if (getBooleanPreference(DATA_IMPORTED)) {
-            Handler(Looper.getMainLooper()).postDelayed(
-                { startActivity<HostActivity>() },
-                DELAY
-            )
+            callDelayed(DELAY) { startActivity<HostActivity>() }
+        } else {
+            if (isOnline()) {
+                // 1. ako si online, pokreni servis za skidanje podataka
+                
+            } else {
+                // 2. u suprotnom ispisi poruku i izidji
+                binding.tvSplash.text = getString(R.string.NO_INTERNET)
+                callDelayed(DELAY) { finish() }
+            }
         }
-        // u suprotnom,
-        // 1. ako si online, pokreni servis za skidanje podataka
-        // 2. u suprotnom ispisi poruku i izidji
     }
 
     private fun startAnimation() {
