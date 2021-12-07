@@ -1,5 +1,6 @@
 package hr.algebra.nasa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import hr.algebra.nasa.databinding.ActivitySplashScreenBinding
@@ -26,7 +27,12 @@ class SplashScreenActivity : AppCompatActivity() {
         } else {
             if (isOnline()) {
                 // 1. ako si online, pokreni servis za skidanje podataka
-                
+                Intent(this, NasaService::class.java).apply {
+                    NasaService.enqueue(
+                        this@SplashScreenActivity,
+                        this
+                    )
+                }
             } else {
                 // 2. u suprotnom ispisi poruku i izidji
                 binding.tvSplash.text = getString(R.string.NO_INTERNET)

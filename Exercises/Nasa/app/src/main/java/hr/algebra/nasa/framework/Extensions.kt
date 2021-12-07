@@ -1,6 +1,7 @@
 package hr.algebra.nasa.framework
 
 import android.app.Activity
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
@@ -12,6 +13,7 @@ import android.view.animation.AnimationUtils
 import androidx.core.content.getSystemService
 import androidx.preference.PreferenceManager
 import hr.algebra.nasa.HostActivity
+import hr.algebra.nasa.NasaReceiver
 
 fun View.startAnimation(animationId: Int) =
     startAnimation(AnimationUtils.loadAnimation(context, animationId))
@@ -47,3 +49,6 @@ fun callDelayed(delay: Long, function: Runnable) {
         delay
     )
 }
+
+inline fun <reified T : BroadcastReceiver> Context.sendBroadcast() =
+    sendBroadcast(Intent(this, T::class.java))
