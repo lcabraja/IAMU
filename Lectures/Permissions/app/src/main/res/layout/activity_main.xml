@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/paddingMain"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_phone_number"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:hint="@string/enter_message"
+        android:inputType="textMultiLine"
+        android:lines="8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btnMargin"
+            android:layout_weight="1"
+            android:background="@drawable/phone"
+            app:backgroundTint="@null"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btnPhoneDirect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btnMargin"
+            android:layout_weight="1"
+            android:background="@drawable/phone_direct"
+            app:backgroundTint="@null"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btnSms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btnMargin"
+            android:layout_weight="1"
+            android:background="@drawable/sms"
+            app:backgroundTint="@null"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btnSmsDirect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btnMargin"
+            android:layout_weight="1"
+            android:background="@drawable/sms_direct"
+            app:backgroundTint="@null"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+</LinearLayout>
