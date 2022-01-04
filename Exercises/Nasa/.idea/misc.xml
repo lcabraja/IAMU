@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/Nasa/app/src/main/res/drawable/navigation_text_color.xml" value="0.3828125" />
+        <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/Nasa/app/src/main/res/layout/activity_host.xml" value="0.5" />
+        <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/Nasa/app/src/main/res/layout/fragment_about.xml" value="0.28306159420289856" />
+        <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/Nasa/app/src/main/res/layout/fragment_items.xml" value="0.28306159420289856" />
+        <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/Nasa/app/src/main/res/layout/navigation_header.xml" value="0.28306159420289856" />
+        <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/Nasa/app/src/main/res/menu/navigation_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
         <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
         <entry key="..\:/Users/lcabraja/AndroidStudioProjects/IAMU/Exercises/app/src/main/res/drawable/ic_menu.xml" value="0.3828125" />

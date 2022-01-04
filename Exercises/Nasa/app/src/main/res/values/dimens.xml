@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nhWidth">150dp</dimen>
+    <dimen name="nhHeight">100dp</dimen>
+    <dimen name="nhMarginTop">25dp</dimen>
+    <dimen name="nvWidth">162dp</dimen>
+    <dimen name="nvHeight">240dp</dimen>
+</resources>
